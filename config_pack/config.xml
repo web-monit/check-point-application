@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<!--be care full enter below value currently, elsver the results will sendedd fo wrong dest-->
+
+<!--NOTE : Enter your times in second-->
+
+<config>
+    <confpack>
+        <conf_pack_id>1</conf_pack_id>
+    </confpack>
+    <syncservice>
+        <synctime>120</synctime><!--//Every 2 minutes-->
+    </syncservice>
+    <appmainservice>
+        <updatetime>60</updatetime>
+        <threadpool>10</threadpool>
+    </appmainservice>
+    <interuptserice>
+        <checktime>2</checktime><!--// inter upt service check time for new interupt -->
+    </interuptserice>
+    <exceptionservice>
+        <exceptionchecktime>2</exceptionchecktime>
+    </exceptionservice>
+    <app>
+        <version>1.1.1</version>
+        <location>Zanjan</location>
+        <appurl>http://127.0.0.1:5001</appurl>
+        <apphost>127.0.0.1</apphost>
+        <appport>5001</appport>
+        <urls>
+            <appurlregister>/url/register</appurlregister>
+            <appurlremove>/url/remove</appurlremove>
+        </urls>
+    </app>
+    <service>
+        <serviceurl>http://127.0.0.1:3002</serviceurl>
+        <servicehost>127.0.0.1</servicehost>
+        <serviceport>3002</serviceport>
+        <urls>
+            <syncurl>/result</syncurl>
+            <interupturl>/interupt</interupturl>
+            <registeappurl>/app/register</registeappurl>
+            <servicegeturls>/url</servicegeturls>
+        </urls>
+    </service>
+    <db>
+        <dbpackid>2</dbpackid>
+        <db_max_pool>50</db_max_pool>
+        <db_wait_queue_multiple>100</db_wait_queue_multiple>
+        <db_wait_queue_timeout_ms>100</db_wait_queue_timeout_ms>
+        <dbhost>127.0.0.1</dbhost>
+        <dbport>27017</dbport>
+    </db>
+    <use_anonymous value="true" />
+</config>
